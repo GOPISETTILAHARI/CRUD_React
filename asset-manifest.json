@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/CRUD_React/static/js/main.d648c876.chunk.js",
-    "main.js.map": "/CRUD_React/static/js/main.d648c876.chunk.js.map",
+    "main.js": "/CRUD_React/static/js/main.e3d7109a.chunk.js",
+    "main.js.map": "/CRUD_React/static/js/main.e3d7109a.chunk.js.map",
     "runtime-main.js": "/CRUD_React/static/js/runtime-main.dfe62ee2.js",
     "runtime-main.js.map": "/CRUD_React/static/js/runtime-main.dfe62ee2.js.map",
-    "static/js/2.087a8b23.chunk.js": "/CRUD_React/static/js/2.087a8b23.chunk.js",
-    "static/js/2.087a8b23.chunk.js.map": "/CRUD_React/static/js/2.087a8b23.chunk.js.map",
+    "static/js/2.4beb7415.chunk.js": "/CRUD_React/static/js/2.4beb7415.chunk.js",
+    "static/js/2.4beb7415.chunk.js.map": "/CRUD_React/static/js/2.4beb7415.chunk.js.map",
     "index.html": "/CRUD_React/index.html",
-    "precache-manifest.68bf90421af0e15d9a9915b22941c737.js": "/CRUD_React/precache-manifest.68bf90421af0e15d9a9915b22941c737.js",
+    "precache-manifest.858f31f0ac1d6293cef75b8162afad03.js": "/CRUD_React/precache-manifest.858f31f0ac1d6293cef75b8162afad03.js",
     "service-worker.js": "/CRUD_React/service-worker.js",
-    "static/js/2.087a8b23.chunk.js.LICENSE.txt": "/CRUD_React/static/js/2.087a8b23.chunk.js.LICENSE.txt"
+    "static/js/2.4beb7415.chunk.js.LICENSE.txt": "/CRUD_React/static/js/2.4beb7415.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dfe62ee2.js",
-    "static/js/2.087a8b23.chunk.js",
-    "static/js/main.d648c876.chunk.js"
+    "static/js/2.4beb7415.chunk.js",
+    "static/js/main.e3d7109a.chunk.js"
   ]
 }
