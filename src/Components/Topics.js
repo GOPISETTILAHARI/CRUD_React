@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { MainContext } from "../Context/MainContext";
-import { v4 as uuidv4 } from "uuid";
 
 const Topics = () => {
   const { table } = useContext(MainContext);
@@ -20,7 +19,7 @@ const Topics = () => {
             <tbody>
               {table.map((work) => {
                 return (
-                  <tr key={uuidv4()}>
+                  <tr key={work._id}>
                     <td>{work.Topic}</td>
                     <td>{work.Details}</td>
                   </tr>
