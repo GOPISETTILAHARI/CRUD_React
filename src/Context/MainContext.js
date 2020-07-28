@@ -1,36 +1,39 @@
 import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 export const MainContext = createContext();
 const MainContextProvider = (props) => {
-  const data = JSON.parse(localStorage.getItem("works")) || [];
-
-  const [table, setTable] = useState(data);
-  const [item, setItem] = useState(null);
   useEffect(() => {
-    localStorage.setItem("works", JSON.stringify(table));
-  }, [table]);
+    const func = async () => {
+      const res = await axios.get("http://localhost:5000/data");
+      setTable(res.data);
+    };
+    func();
+  }, []);
+  const [table, setTable] = useState([]);
+  const [item, setItem] = useState(null);
   const Modify = (work) => {
     setItem(work);
   };
-  const EditWork = (work) => {
-    let works = [...table];
-    setTable(
-      works.map((w) =>
-        w.Topic === item.Topic && w.Details === item.Details ? work : w
-      )
+  const EditWork = async (work) => {
+    const res = await axios.patch(
+      `http://localhost:5000/data/${item._id}`,
+      work
     );
+    console.log(res);
+    let works = [...table];
+    setTable(works.map((w) => (work._id === w._id ? work : w)));
     setItem(null);
   };
-  const AddWork = (work) => {
-    const works = [...table, work];
+  const AddWork = async (work) => {
+    const res = await axios.post("http://localhost:5000/data", work);
+    const works = [...table, res.data];
     setTable(works);
   };
-  const Delete = (work) => {
+  const Delete = async (id) => {
+    const res = await axios.delete(`http://localhost:5000/data/${id}`);
+    console.log(res);
     let works = [...table];
-    setTable(
-      works.filter(
-        (w) => !(w.Topic === work.Topic && w.Details === work.Details)
-      )
-    );
+    setTable(works.filter((w) => w._id !== id));
   };
   return (
     <MainContext.Provider
